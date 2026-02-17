@@ -2,9 +2,8 @@
 
 **Blanchard** — это веб-сайт картинной галереи, сделанный на HTML & CSS.
 
-
 🌐 Просмотр:
-[Blanchard](https://cheradam13.github.io/Blanchard/)
+[Blanchard](https://adamchereshniuk.github.io/Blanchard/)
 
 🎨 Макет:
 [Figma](https://www.figma.com/design/tj7JfWXXpd5poySBgaW1nL/Blanchard--new-?t=HGZI05dIoH8UFOuq-0)
