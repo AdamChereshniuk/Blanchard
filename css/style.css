@@ -285,15 +285,15 @@ input {
     transition: opacity 0.3s;
 }
 
-.checkbox__input1:checked + .checkbox__text1::after,
-.checkbox__input2:checked + .checkbox__text2::after,
-.checkbox__input3:checked + .checkbox__text3::after {
+.checkbox__input1.checked + .checkbox__text1::after,
+.checkbox__input2.checked + .checkbox__text2::after,
+.checkbox__input3.checked + .checkbox__text3::after {
     opacity: 1;
 }
 
-.checkbox__input1:checked + .checkbox__text1::before,
-.checkbox__input2:checked + .checkbox__text2::before,
-.checkbox__input3:checked + .checkbox__text3::before {
+.checkbox__input1.checked + .checkbox__text1::before,
+.checkbox__input2.checked + .checkbox__text2::before,
+.checkbox__input3.checked + .checkbox__text3::before {
     border: 1px solid #C283F3;
 }
 
@@ -306,6 +306,11 @@ input {
 
 .gallery__list {
     gap: 50px;
+}
+
+.gallery__img {
+    width: 350px;
+    height: 350px;
 }
 
 /* Catalog */
