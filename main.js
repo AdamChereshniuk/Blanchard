@@ -22,11 +22,9 @@ checkboxes.forEach((checkbox, checkboxIndex) => {
         });
 
         checkbox.querySelector(".checkbox__input").classList.add("checked");
-
-        checkboxes.forEach((checkbox2, checkboxIndex2) => {
-            if(checkboxIndex2 !== checkboxIndex) {
-                checkbox2.querySelector(".checkbox__input").classList.remove("checked");
-            };
+        
+        checkboxes.filter((checkbox2, checkboxIndex2) => checkboxIndex2 !== checkboxIndex).forEach(el => {
+            if(el.classList.contains("checked")) el.classList.remove("checked");
         });
     });
 });

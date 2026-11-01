@@ -309,8 +309,12 @@ input {
 }
 
 .gallery__img {
-    width: 350px;
-    height: 350px;
+    width: 350px !important;
+    min-width: 350px !important;
+    max-width: 350px !important;
+    height: 350px !important;
+    min-height: 350px !important;
+    max-height: 350px !important;
 }
 
 /* Catalog */
