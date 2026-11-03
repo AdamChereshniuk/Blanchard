@@ -1,4 +1,5 @@
 const checkboxes = document.querySelectorAll(".checkbox");
+const checkboxesArr = [document.querySelector(".checkbox-1"), document.querySelector(".checkbox-2"), document.querySelector(".checkbox-3")];
 const galleryImages = document.querySelectorAll(".gallery__img");
 
 const getImagePath = (index) => `img/gallery/${index}.jpg`;
@@ -9,12 +10,15 @@ const checkboxImagesPaths = [
     [getImagePath(7), getImagePath(8), getImagePath(9)],
 ];
 
+let currentCheckboxCheckedIndex = null;
+
 galleryImages.forEach((image, imageIndex) => {
     image.setAttribute("src", checkboxImagesPaths[2][imageIndex]);
 });
 
 checkboxes.forEach((checkbox, checkboxIndex) => {
     checkbox.addEventListener("click", () => {
+        currentCheckboxCheckedIndex = checkboxIndex;
         const galleryImagesByIndex = checkboxImagesPaths[checkboxIndex];
 
         galleryImages.forEach((image, imageIndex) => {
@@ -22,9 +26,8 @@ checkboxes.forEach((checkbox, checkboxIndex) => {
         });
 
         checkbox.querySelector(".checkbox__input").classList.add("checked");
-        
-        checkboxes.filter((checkbox2, checkboxIndex2) => checkboxIndex2 !== checkboxIndex).forEach(el => {
-            if(el.classList.contains("checked")) el.classList.remove("checked");
-        });
+
+        const allOtherCheckboxes = checkboxesArr.filter((_, index) => index !== checkboxIndex);
+        allOtherCheckboxes.forEach((el, elIndex) => el.querySelector("input").classList.remove("checked"));
     });
 });

@@ -422,4 +422,13 @@
     .footer__socials-img {
         max-width: 50px;
     }
+
+    .gallery__img {
+        width: 290px !important;
+        min-width: 290px !important;
+        max-width: 290px !important;
+        height: 290px !important;
+        min-height: 290px !important;
+        max-height: 290px !important;
+    }
 }
